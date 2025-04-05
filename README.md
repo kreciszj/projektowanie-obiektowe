@@ -3,15 +3,15 @@
 
 **Zadanie 1** Paradygmaty
 
-:x: 3.0 | Procedura do generowania 50 losowych liczb od 0 do 100 [Link do commita 1](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 3.0 | Procedura do generowania 50 losowych liczb od 0 do 100 [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/fd380eed97f61e3bf9cabf1bd9b3c79790ef9cf0)
 
-:x: 3.5 | Procedura do sortowania liczb [Link do commita 2](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 3.5 | Procedura do sortowania liczb [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/8053dd0f74d062429eb41f1a4dc5cc6c96544038)
 
-:x: 4.0 | Dodanie parametrów do procedury losującej określającymi zakres losowania: od, do, ile [Link do commita 3](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 4.0 | Dodanie parametrów do procedury losującej określającymi zakres losowania: od, do, ile [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/72942607b7a888f2bab9fb1d618d9627110db25c)
 
-:x: 4.5 | 5 testów jednostkowych testujące procedury [Link do commita 4](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 4.5 | 5 testów jednostkowych testujące procedury [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/f458213fc4e5751f4859345191c6bdccbdde47a5)
 
-:x: 5.0 | Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker [Link do commita 5](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 5.0 | Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/abc1a36f5669632c335d2048cdce6cd684321d71)
 
 Kod: [Zadanie1](./zadanie1/)
 
