@@ -1,4 +1,4 @@
-# projektowanie-obiektowe
+# Projektowanie Obiektowe
 ---
 
 **Zadanie 1** Paradygmaty
