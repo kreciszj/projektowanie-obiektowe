@@ -13,7 +13,7 @@
 
 :white_check_mark: 5.0 | Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/abc1a36f5669632c335d2048cdce6cd684321d71)
 
-Kod: [Zadanie1](./zadanie1/)
+Kod: [Zadanie1](./zadanie1/) <br>
 Demo: [zadanie1_po_demo.zip](./demos/zadanie1_po_demo.zip)
 
 
@@ -29,7 +29,7 @@ Demo: [zadanie1_po_demo.zip](./demos/zadanie1_po_demo.zip)
 
 :x: 5.0 | Stworzenie panelu administracyjnego z mockowanym logowaniem [Link do commita 5](https://github.com/kprzystalski/workshop_template/commit/hash)
 
-Kod: [Zadanie2](./zadanie2/)
+Kod: [Zadanie2](./zadanie2/) <br>
 Demo: [zadanie2_po_demo.zip](./demos/zadanie2_po_demo.zip)
 
 
@@ -45,5 +45,5 @@ Demo: [zadanie2_po_demo.zip](./demos/zadanie2_po_demo.zip)
 
 :x: 5.0 | Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy [Link do commita 5](https://github.com/kprzystalski/workshop_template/commit/hash)
 
-Kod: [Zadanie3](./zadanie3/)
+Kod: [Zadanie3](./zadanie3/) <br>
 Demo: [zadanie3_po_demo.zip](./demos/zadanie3_po_demo.zip)
