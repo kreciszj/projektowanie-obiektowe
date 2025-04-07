@@ -19,9 +19,9 @@ Demo: [zadanie1_po_demo.zip](./demos/zadanie1_po_demo.zip)
 
 **Zadanie 2** Wzorce architektury
 
-:white_check_mark: 3.0 | Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/923d1ece0f43088d2f09ceb39b4d9cecd980cd07)
+:white_check_mark: 3.0 | Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/bad8fbffd60d57c10680e214e3ec3c7d3b3ce94a)
 
-:x: 3.5 | Należy stworzyć skrypty do testów endpointów via curl [Link do commita 2](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 3.5 | Należy stworzyć skrypty do testów endpointów via curl [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/92aa3014396785d468e6deeefcf5a0481165056d)
 
 :x: 4.0 | Należy stworzyć dwa dodatkowe kontrolery wraz z modelami [Link do commita 3](https://github.com/kprzystalski/workshop_template/commit/hash)
 
