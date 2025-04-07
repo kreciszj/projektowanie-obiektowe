@@ -23,11 +23,11 @@ class ProductController extends AbstractController
         $data = [];
         foreach ($products as $product) {
             $data[] = [
-                'id' => $product->getId(),
-                'name' => $product->getName(),
-                'price' => $product->getPrice(),
-                'description' => $product->getDescription(),
-                'createdAt' => $product->getCreatedAt()->format('Y-m-d H:i:s'),
+                'id'         => $product->getId(),
+                'name'       => $product->getName(),
+                'price'      => $product->getPrice(),
+                'description'=> $product->getDescription(),
+                'createdAt'  => $product->getCreatedAt()->format('Y-m-d H:i:s'),
             ];
         }
 
@@ -40,10 +40,11 @@ class ProductController extends AbstractController
     #[Route('/create', name: 'product_create', methods: ['POST'])]
     public function create(Request $request, ManagerRegistry $doctrine): JsonResponse
     {
-        $entityManager = $doctrine->getManager();
-        $name = $request->request->get('name');
-        $price = $request->request->get('price');
-        $description = $request->request->get('description');
+        $data = json_decode($request->getContent(), true);
+
+        $name        = $data['name']        ?? null;
+        $price       = $data['price']       ?? null;
+        $description = $data['description'] ?? null;
 
         if (!$name || !$price || !$description) {
             return $this->json(['error' => 'Missing required fields'], 400);
@@ -55,12 +56,13 @@ class ProductController extends AbstractController
         $product->setDescription($description);
         $product->setCreatedAt(new \DateTime());
 
+        $entityManager = $doctrine->getManager();
         $entityManager->persist($product);
         $entityManager->flush();
 
         return $this->json([
             'message' => 'Product created successfully',
-            'id' => $product->getId(),
+            'id'      => $product->getId(),
         ]);
     }
 
@@ -77,9 +79,12 @@ class ProductController extends AbstractController
             return $this->json(['error' => 'Product not found'], 404);
         }
 
-        $name = $request->request->get('name', $product->getName());
-        $price = $request->request->get('price', $product->getPrice());
-        $description = $request->request->get('description', $product->getDescription());
+        $data = json_decode($request->getContent(), true);
+
+        // Jeśli klucza nie ma w tablicy, użyj aktualnej wartości
+        $name        = $data['name']        ?? $product->getName();
+        $price       = $data['price']       ?? $product->getPrice();
+        $description = $data['description'] ?? $product->getDescription();
 
         $product->setName($name);
         $product->setPrice((float)$price);
@@ -89,7 +94,7 @@ class ProductController extends AbstractController
 
         return $this->json([
             'message' => 'Product updated successfully',
-            'id' => $product->getId(),
+            'id'      => $product->getId(),
         ]);
     }
 
