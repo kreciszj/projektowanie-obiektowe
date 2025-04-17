@@ -35,15 +35,15 @@ Demo: [zadanie2_po_demo.zip](./demos/zadanie2_po_demo.zip)
 
 **Zadanie 3** Wzorce kreacyjne
 
-:x: 3.0 | Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint’cie w formacie JSON - Kotlin + Spring Boot [Link do commita 1](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 3.0 | Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint’cie w formacie JSON - Kotlin + Spring Boot [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/b7cc18f020a5c48a4eaf554c942f614e0c33d800)
 
-:x: 3.5 | Należy stworzyć klasę do autoryzacji (mock) jako Singleton w formie eager [Link do commita 2](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 3.5 | Należy stworzyć klasę do autoryzacji (mock) jako Singleton w formie eager [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/ceca2e20fe8abe5b2d93bd84fe2309f2764e4142)
 
-:x: 4.0 | Należy obsłużyć dane autoryzacji przekazywane przez użytkownika [Link do commita 3](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 4.0 | Należy obsłużyć dane autoryzacji przekazywane przez użytkownika [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/6651ef236fe1cdf1c76c10c85c4258e9265b3354)
 
-:x: 4.5 | Należy wstrzyknąć singleton do głównej klasy via @Autowired [Link do commita 4](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 4.5 | Należy wstrzyknąć singleton do głównej klasy via @Autowired [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/c315225ae7f0a26b420cf991f85434b027012a57)
 
-:x: 5.0 | Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy [Link do commita 5](https://github.com/kprzystalski/workshop_template/commit/hash)
+:white_check_mark: 5.0 | Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/c23557970eb835369999b466443883f6b0a07c3d)
 
 Kod: [Zadanie3](./zadanie3/) <br>
 Demo: [zadanie3_po_demo.zip](./demos/zadanie3_po_demo.zip)
