@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 
 	"github.com/labstack/echo/v4"
 	"zadanie4/internal/db"
@@ -38,23 +39,43 @@ func main() {
 
 	// dane z API
 	e.GET("/weather/live", func(c echo.Context) error {
-		lat := c.QueryParam("lat")
-		lon := c.QueryParam("lon")
-		if lat == "" || lon == "" {
+		latStr := c.QueryParam("lat")
+		lonStr := c.QueryParam("lon")
+		if latStr == "" || lonStr == "" {
 			return c.String(http.StatusBadRequest, "missing lat or lon query param")
 		}
-
-		raw, err := p.Fetch(lat, lon)
+	
+		raw, err := p.Fetch(latStr, lonStr)
 		if err != nil {
 			log.Println(err)
 			return c.String(http.StatusBadGateway, "external fetch failed")
 		}
-
-		var out map[string]any
-		if err := json.Unmarshal(raw, &out); err != nil {
+	
+		type omResp struct {
+			CurrentWeather struct {
+				Temperature float64 `json:"temperature"`
+			} `json:"current_weather"`
+		}
+		var om omResp
+		if err := json.Unmarshal(raw, &om); err != nil {
 			return c.String(http.StatusBadGateway, "invalid external response")
 		}
-		return c.JSONPretty(http.StatusOK, out, "  ")
+	
+		latF, _ := strconv.ParseFloat(latStr, 64)
+		lonF, _ := strconv.ParseFloat(lonStr, 64)
+	
+		rec := weather.Weather{
+			Location:  latStr + "," + lonStr,
+			Latitude:  latF,
+			Longitude: lonF,
+			TempC:     om.CurrentWeather.Temperature,
+		}
+		if err := database.Create(&rec).Error; err != nil {
+			log.Println(err)
+			return c.String(http.StatusInternalServerError, "db write error")
+		}
+	
+		return c.JSONPretty(http.StatusOK, rec, "  ")
 	})
 
 	port := os.Getenv("PORT")
