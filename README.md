@@ -47,3 +47,19 @@ Demo: [zadanie2_po_demo.zip](./demos/zadanie2_po_demo.zip)
 
 Kod: [Zadanie3](./zadanie3/) <br>
 Demo: [zadanie3_po_demo.zip](./demos/zadanie3_po_demo.zip)
+
+
+**Zadanie 4** Wzorce strukturalne
+
+:white_check_mark: 3.0 | Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Pogody, która pozwala na pobieranie danych o pogodzie (lub akcjach giełdowych) [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/ceb942a5299a07542bb43f6e3a6e7efd8674171d)
+
+:white_check_mark: 3.5 | Należy stworzyć model Pogoda (lub Giełda) wykorzystując gorm, a dane załadować z listy przy uruchomieniu [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/1eeab55c6b232db83ecf6fe6da172d1b304295d7)
+
+:white_check_mark: 4.0 | Należy stworzyć klasę proxy, która pobierze dane z serwisu zewnętrznego podczas zapytania do naszego kontrolera [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/353c9c3e121a18a573648fa442e9ca6e429abed0)
+
+:white_check_mark: 4.5 | Należy zapisać pobrane dane z zewnątrz do bazy danych [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/f02416a1add1b463e45195a98f8581f73f8678ac)
+
+:white_check_mark: 5.0 | Należy rozszerzyć endpoint na więcej niż jedną lokalizację (Pogoda), lub akcje (Giełda) zwracając JSONa [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/96a4274c6ade5fad8c7c34af3fe1fb722702bd5b)
+
+Kod: [Zadanie4](./zadanie4/) <br>
+Demo: [zadanie4_po_demo.zip](./demos/zadanie4_po_demo.zip)
