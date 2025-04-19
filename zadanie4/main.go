@@ -37,7 +37,7 @@ func main() {
 		return c.JSONPretty(http.StatusOK, records, "  ")
 	})
 
-	// dane z API
+	// dane z API - pojedyncze
 	e.GET("/weather/live", func(c echo.Context) error {
 		latStr := c.QueryParam("lat")
 		lonStr := c.QueryParam("lon")
@@ -77,6 +77,58 @@ func main() {
 	
 		return c.JSONPretty(http.StatusOK, rec, "  ")
 	})
+
+	type locationReq struct {
+		Lat float64 `json:"lat"`
+		Lon float64 `json:"lon"`
+	}
+	
+	// dane z API - wiele na raz
+	e.POST("/weather/live/list", func(c echo.Context) error {
+		var req []locationReq
+		if err := c.Bind(&req); err != nil {
+			return c.String(http.StatusBadRequest, "invalid json")
+		}
+		if len(req) == 0 {
+			return c.String(http.StatusBadRequest, "empty list")
+		}
+	
+		type omResp struct {
+			CurrentWeather struct {
+				Temperature float64 `json:"temperature"`
+			} `json:"current_weather"`
+		}
+	
+		results := make([]weather.Weather, 0, len(req))
+		for _, loc := range req {
+			latStr := strconv.FormatFloat(loc.Lat, 'f', 6, 64)
+			lonStr := strconv.FormatFloat(loc.Lon, 'f', 6, 64)
+	
+			raw, err := p.Fetch(latStr, lonStr)
+			if err != nil {
+				log.Println(err)
+				continue
+			}
+			var om omResp
+			if err := json.Unmarshal(raw, &om); err != nil {
+				log.Println(err)
+				continue
+			}
+			rec := weather.Weather{
+				Location:  latStr + "," + lonStr,
+				Latitude:  loc.Lat,
+				Longitude: loc.Lon,
+				TempC:     om.CurrentWeather.Temperature,
+			}
+			if err := database.Create(&rec).Error; err != nil {
+				log.Println(err)
+				continue
+			}
+			results = append(results, rec)
+		}
+	
+		return c.JSONPretty(http.StatusOK, results, "  ")
+	})	
 
 	port := os.Getenv("PORT")
 	if port == "" {
