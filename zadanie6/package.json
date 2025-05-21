@@ -1,0 +1,9 @@
+{
+    "scripts": {
+      "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
+    },
+    "lint-staged": {
+      "src/**/*.{js,jsx,ts,tsx}": "npm run lint --"
+    }
+  }
+  
