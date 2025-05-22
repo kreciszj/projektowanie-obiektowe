@@ -1,0 +1,52 @@
+#extend("base") {
+    #export("title", "Lista produktów")  
+
+    #export("body") {
+        <p>
+            <a href="/products/new">Dodaj produkt</a>
+        </p>
+
+        #if(products.count == 0) {
+            <p><em>Brak produktów w bazie.</em></p>
+        } #else {
+            <table border="1" cellspacing="0" cellpadding="6">
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Opis</th>
+                        <th style="text-align:right;">Cena</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    #for(product in products) {
+                        <tr>
+                            <td>
+                                <a href="/products/#(product.id)">#(product.name)</a>
+                            </td>
+
+                            <td>
+                                #if(product.description != nil) {
+                                    #(product.description!)
+                                } #else {
+                                    -
+                                }
+                            </td>
+
+                            <td style="text-align:right;">#(product.price)</td>
+
+                            <td>
+                                <a href="/products/#(product.id)/edit">Edit</a>
+                                <form method="post"
+                                      action="/products/#(product.id)/delete"
+                                      style="display:inline">
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+}

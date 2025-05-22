@@ -1,0 +1,20 @@
+#extend("base") {
+    #export("title", "Szczegóły produku")
+
+    #export("body") {
+        <section>
+            <p><strong>Nazwa:</strong> #(product.name)</p>
+
+            #if(product.description != nil) {
+                <p><strong>Opis:</strong> #(product.description!)</p>
+            }
+
+            <p><strong>Cena:</strong> #(product.price)</p>
+        </section>
+
+        <p>
+            <a href="/products/#(product.id)/edit">Edytuj</a> |
+            <a href="/products/list">Powrót do listy</a>
+        </p>
+    }
+}

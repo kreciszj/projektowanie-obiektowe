@@ -1,0 +1,22 @@
+#extend("base") {
+    #export("title", "Nowy produkt")
+
+    #export("body") {
+        <form method="post" action="/products/new">
+            <label>Nazwa<br>
+                <input type="text" name="name" required>
+            </label><br><br>
+
+            <label>Opis<br>
+                <textarea name="description" rows="3"></textarea>
+            </label><br><br>
+
+            <label>Cena<br>
+                <input type="number" step="0.01" name="price" required>
+            </label><br><br>
+
+            <button type="submit">Zapisz</button>
+            <a href="/products/list">Anuluj</a>
+        </form>
+    }
+}
