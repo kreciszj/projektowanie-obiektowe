@@ -42,7 +42,7 @@ class ProductActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     ProductScreen(
                         products = list,
-                        onAdd = { Cart.items.add(it) },
+                        onAdd = { RealmDB.addToCart(it) },
                         onOpenCart = { startActivity(Intent(this, CartActivity::class.java)) }
                     )
                 }

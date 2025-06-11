@@ -16,23 +16,16 @@ class CartActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         title = "Cart"
+        val cartItems = RealmDB.getCartItems()
         setContent {
             MaterialTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     LazyColumn {
-                        if (Cart.items.isEmpty()) {
-                            item {
-                                Text(
-                                    text = "Cart is empty",
-                                    fontSize = 20.sp
-                                )
-                            }
+                        if (cartItems.isEmpty()) {
+                            item { Text(text = "Cart is empty", fontSize = 20.sp) }
                         } else {
-                            items(Cart.items) { item ->
-                                Text(
-                                    text = item.name,
-                                    fontSize = 20.sp
-                                )
+                            items(cartItems) { item ->
+                                Text(text = item.name, fontSize = 20.sp)
                             }
                         }
                     }
