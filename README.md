@@ -117,7 +117,7 @@ Demo: [zadanie7_po_demo.zip](./demos/zadanie7_po_demo.zip)
 
 :white_check_mark: 3.5 | Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 100 asercji [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/abdece8b163f401947830fae1ed21e69db9d8752)
 
-:x: 4.0 | Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 100 asercjami [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+:white_check_mark: 4.0 | Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 100 asercjami [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/abdece8b163f401947830fae1ed21e69db9d8752)
 
 :x: 4.5 | Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
 
