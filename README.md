@@ -63,3 +63,80 @@ Demo: [zadanie3_po_demo.zip](./demos/zadanie3_po_demo.zip)
 
 Kod: [Zadanie4](./zadanie4/) <br>
 Demo: [zadanie4_po_demo.zip](./demos/zadanie4_po_demo.zip)
+
+
+**Zadanie 5** Wzorce behawioralne
+
+:white_check_mark: 3.0 | W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej; [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/a5dba1849218b29042af63930056ee7331c84f56)
+
+:white_check_mark: 3.5 | Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/d982a93184b174353a7ea6a7fae2c4b991718f68)
+
+:white_check_mark: 4.0 | Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/b7f3c043f32438ed6b659fd0f942d4436fb2e572)
+
+:white_check_mark: 4.5 | Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/cf83ed14acb41f6bc3ce4ff7610a0772b27b27e8)
+
+:white_check_mark: 5.0 | Należy wykorzystać axios’a oraz dodać nagłówki pod CORS [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/7a9736109a5c3e31d37763712f3643faba79ef5a)
+
+Kod: [Zadanie5](./zadanie5/) <br>
+Demo: [zadanie5_po_demo.zip](./demos/zadanie5_po_demo.zip)
+
+**Zadanie 6** Zapaszki
+
+:white_check_mark: 3.0 | Należy dodać eslint w hookach gita [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/ebde7e2de7bc243bf4178671c131f3165a760472)
+
+:white_check_mark: 3.5 | Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji klienckiej) [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/ebde7e2de7bc243bf4178671c131f3165a760472)
+
+:x: 4.0 | Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji klienckiej) [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+:x: 4.5 | Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji klienckiej) [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+:x: 5.0 | Zredukować duplikaty kodu do 0% [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+Kod: [Zadanie6](./zadanie6/) <br>
+Demo: [zadanie6_po_demo.zip](./demos/zadanie6_po_demo.zip)
+
+**Zadanie 7** Antywzorce
+
+:white_check_mark: 3.0 | Należy stworzyć kontroler wraz z modele Produktów zgodny z CRUD w ORM Fluent [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/329f65b2d583acd135277438781aab90688b6896)
+
+:white_check_mark: 3.5 | Należy stworzyć szablony w Leaf [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/35f0afda2ec50cacc1925e0b7c25179c0fa71595)
+
+:x: 4.0 | Należy stworzyć drugi model oraz kontroler Kategorii wraz z relacją [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+:x: 4.5 | Należy wykorzystać Redis do przechowywania danych [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+:x: 5.0 | Wrzucić aplikację na heroku [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+Kod: [Zadanie7](./zadanie7/) <br>
+Demo: [zadanie7_po_demo.zip](./demos/zadanie7_po_demo.zip)
+
+
+**Zadanie 8** Testy
+
+:white_check_mark: 3.0 | Należy stworzyć 30 przypadków testowych w Pythonie w WebDriverze [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/ba58282e0fbb28ba0f54615743d0bd6b662e25fb)
+
+:white_check_mark: 3.5 | Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 100 asercji [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/abdece8b163f401947830fae1ed21e69db9d8752)
+
+:x: 4.0 | Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 100 asercjami [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+:x: 4.5 | Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+:x: 5.0 | Należy uruchomić testy funkcjonalne na Browserstacku na urządzeniu mobilnym [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+Kod: [Zadanie8](./zadanie8/) <br>
+Demo: [zadanie8_po_demo.zip](./demos/zadanie8_po_demo.zip)
+
+**Zadanie 9** Mobile First
+
+:white_check_mark: 3.0 | Stworzyć listę kategorii oraz produktów [Link do commita 1](https://github.com/kreciszj/projektowanie-obiektowe/commit/884036106874244b0e9b92185e2a112ef7ac2968)
+
+:white_check_mark: 3.5 | Dodać widok koszyka [Link do commita 2](https://github.com/kreciszj/projektowanie-obiektowe/commit/2bf2302468b9d2e8ee0328429c80d11e2a074d38)
+
+:white_check_mark: 4.0 | Stworzyć bazę w Realmie [Link do commita 3](https://github.com/kreciszj/projektowanie-obiektowe/commit/24b038cd39342b9143a1b74265d054fc68f8a0ff)
+
+:x: 4.5 | Dodać płatności w Stripe [Link do commita 4](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+:x: 5.0 | dodać logowanie i rejestrację via Oauth2 [Link do commita 5](https://github.com/kreciszj/projektowanie-obiektowe/commit/)
+
+Kod: [Zadanie9](./zadanie9/) <br>
+Demo: [zadanie9_po_demo.zip](./demos/zadanie9_po_demo.zip)
